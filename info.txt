@@ -1,0 +1,4 @@
+11/12/2019
+
+Estoy teniendo problemas con los colores de tkinter.
+por ello voy a crear una libreria de manejo de color.
