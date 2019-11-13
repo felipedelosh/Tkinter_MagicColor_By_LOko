@@ -5,6 +5,9 @@ El loquito a decidido crear una libreria para el manejo de colores.
 
 1 - aqui estan referenciados la mayoria de colores disponibles. //self.colores
 2 - se puede llamar un color de forma aleatorea //def colorAleatoreo() >> return srt(UnColorCualquiera)
+3 + se puede llamar un color que no sea ELCOLORX //def colorAleatoreoExepto(self, colorExcluido) >> return srt(UnColorCualquiera)
+excepto el excluido
+
 """
 
 import random
@@ -108,3 +111,16 @@ class MagicColor:
                 pass
             else:
                 return self.colores[k]
+
+    def colorParecido(self, pColor):
+        """
+        En el vector de colores se busca aquel color que coincida
+        por ejemplo *red* coincide con red, red2, red3, indian red, ...
+        todo lo que contenga red sera retornado [color, color, ...]. sino retorna vacio [].
+        """
+        vec = []
+        for i in self.colores:
+            if str(pColor).lower().strip() in str(i).lower().strip():
+                vec.append(i)
+
+        return vec
